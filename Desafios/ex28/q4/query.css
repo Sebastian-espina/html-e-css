@@ -1,1 +1,71 @@
 /* Todas as demais versões */
+
+/* Typical Device Breakpoints
+Pequenas telas: até 600px 
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Tv: acima de 1200px
+*/
+
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    main::after {
+        content: 'Essa impressão foi feita pela sua impresora';
+        text-decoration: overline;
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+     h1 {
+        text-shadow: none;
+        color:black;
+    }
+
+    #tablete {display: none;}
+    #print {display: block;}
+    #phone {display: none;}
+    #comp {display: none;}
+    #teve {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(imagens/back-tablet.jpg);
+    }
+
+    #tablete {display: block;}
+    #print {display: none;}
+    #phone {display: none;}
+    #comp {display: none;}
+    #teve {display: none;}
+} /* Tablet */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(imagens/back-pc.jpg);
+    }
+
+    #tablete {display: none;}
+    #print {display: none;}
+    #phone {display: none;}
+    #comp {display: block;}
+    #teve {display: none;}
+}/* Desktop */
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(imagens/back-tv.jpg);
+    }
+
+    #tablete {display: none;}
+    #print {display: none;}
+    #phone {display: none;}
+    #comp {display: none;}
+    #teve {display: block;}
+} /* Telas grandes */
