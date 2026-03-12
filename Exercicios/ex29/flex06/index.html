@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible box</title>
     <style>
+        * {
+            font-family: monospace;
+        }
+
         .container {
             background-color: aqua;
-            height: 300px;
+            height: 500px;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
+            flex-flow: row wrap;
+            align-content: center;
         }
 
         .item {
+            padding: 35px;
             margin: 2px;
             text-align: center;
             background-color: blueviolet;
@@ -31,6 +35,11 @@
         <div class="item">E</div>
         <div class="item">F</div>
         <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">M</div>
     </div>
 </body>
 </html>
